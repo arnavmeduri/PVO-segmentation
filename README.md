@@ -6,6 +6,9 @@ Retinal tears (RTs) are full-thickness breaks in the neurosensory retina that oc
 
 This project focuses on developing deep learning models to identify posterior vitreous opacities (PVOs) in spectral domain optical coherence tomography (SD-OCT) scans as a method for screening RTs in patients with acute, symptomatic PVDs. A total of 500 SD-OCT scans were collected retrospectively from 100 eyes of 93 patients who presented with symptoms of flashes and/or floaters for less than 32 days. Each scan was reviewed and annotated by trained graders to identify PVOs, which were used as ground truth for model training.
 
+<img width="336" alt="image" src="https://github.com/user-attachments/assets/02c69212-ded9-4b27-a876-f10fb9b4c19b" />
+
+
 ### Methods
 
 Two deep learning models were developed for automated PVO detection: a 2D U-Net model and a FRCNN (Faster Region-Based Convolutional Neural Network). Both models were implemented in PyTorch and evaluated using five-fold cross-validation at the subject level. The U-Net architecture was modified with ResNet blocks and trained with a loss function combining Dice loss and binary cross-entropy. The FRCNN model was trained separately using standard region proposal components. To generate PVO counts from segmentation outputs, the determinant of the Hessian matrix was applied as a postprocessing step. The models were assessed by comparing automated PVO counts to ground-truth annotations and using these counts to predict the presence of a retinal tear. A threshold of 15 or more PVOs on at least one raster scan was used as the indicator for retinal tear classification.
