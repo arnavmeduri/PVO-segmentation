@@ -23,8 +23,6 @@ The U-Net model achieved a mean difference of -0.472 ± 3.03 PVOs from the groun
   <img src="https://github.com/user-attachments/assets/7132c383-232c-4054-9235-c18d8758c658" alt="image" width="400" />
 </p>
 
-### Repository Structure
-
-This repository contains notebooks and resources related to the development and evaluation of the models specified above. 
+### File Structure
 - **Preprocessing Scripts**: Jupyter notebooks used to prepare and annotate the dataset (i.e., bounding box generation, mask resizing)
 - **Model Training Notebooks**: Versions of training notebooks (`pytorch_unet_resnet18_arnav_*.ipynb`) used to experiment with different configurations of the U-Net with ResNet18 backbone and evaluation outputs.
