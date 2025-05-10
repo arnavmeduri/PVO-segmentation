@@ -11,7 +11,7 @@ This project focuses on developing deep learning models to identify posterior vi
 Two deep learning models were developed for automated PVO detection: a 2D U-Net model and a FRCNN (Faster Region-Based Convolutional Neural Network). Both models were implemented in PyTorch and evaluated using five-fold cross-validation at the subject level. The U-Net architecture was modified with ResNet blocks and trained with a loss function combining Dice loss and binary cross-entropy. The FRCNN model was trained separately using standard region proposal components. To generate PVO counts from segmentation outputs, the determinant of the Hessian matrix was applied as a postprocessing step. The models were assessed by comparing automated PVO counts to ground-truth annotations and using these counts to predict the presence of a retinal tear. A threshold of 15 or more PVOs on at least one raster scan was used as the indicator for retinal tear classification.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/ae5c6c5b-b0ef-4194-9ae5-db79e2bff29f.png" alt="ResUNet Architecture" width="580" />
+  <img src="https://github.com/user-attachments/assets/7b608255-0556-4824-a63e-205c24ac0827" alt="image" width="400" />
 </p>
 
 ### Results
@@ -20,5 +20,5 @@ The U-Net model achieved a mean difference of -0.472 ± 3.03 PVOs from the groun
 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/7132c383-232c-4054-9235-c18d8758c658" alt="image" />
+  <img src="https://github.com/user-attachments/assets/7132c383-232c-4054-9235-c18d8758c658" alt="image" width="400" />
 </p>
